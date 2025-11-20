@@ -761,3 +761,10 @@ html {
 .airbnb-badge img {
     display: block;
 }
+
+/* Booking Page Hero - Smaller height to show content immediately */
+body:has(.contact .booking-calendar) .hero {
+    height: auto;
+    min-height: 300px;
+    padding: 4rem 0;
+}
