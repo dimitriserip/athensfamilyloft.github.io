@@ -767,4 +767,13 @@ body.booking-page .hero {
     height: auto;
     min-height: 300px;
     padding: 4rem 0;
+    position: relative;
+    transform: none !important; /* Disable parallax effect on booking page */
+}
+
+/* Ensure booking page content stays above the hero background */
+body.booking-page .contact {
+    position: relative;
+    z-index: 10;
+    background: var(--white);
 }
