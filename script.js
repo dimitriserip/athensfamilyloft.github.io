@@ -1,3 +1,6 @@
+// Get navbar reference once
+const navbar = document.querySelector('.navbar');
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -6,7 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(targetId);
         if (target) {
             // Get the navbar height to offset scroll position
-            const navbar = document.querySelector('.navbar');
             const navbarHeight = navbar ? navbar.offsetHeight : 0;
             
             // Calculate the position to scroll to
@@ -23,7 +25,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Navbar scroll effect
 let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -153,6 +154,9 @@ animateElements.forEach((el, index) => {
 const featureCards = document.querySelectorAll('.feature-card');
 featureCards.forEach(card => {
     const expandBtn = card.querySelector('.feature-expand-btn');
+    
+    // Only add listeners if button exists
+    if (!expandBtn) return;
     
     // Make the entire card clickable
     card.addEventListener('click', function(e) {
