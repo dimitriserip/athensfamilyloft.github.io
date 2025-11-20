@@ -763,7 +763,7 @@ html {
 }
 
 /* Booking Page Hero - Smaller height to show content immediately */
-body:has(.contact .booking-calendar) .hero {
+body.booking-page .hero {
     height: auto;
     min-height: 300px;
     padding: 4rem 0;
