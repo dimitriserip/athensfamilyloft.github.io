@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athens Family Loft - Your Perfect Stay in Athens</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +14,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#gallery" class="nav-logo">
+                <img src="logo.svg" alt="Athens Family Loft Logo" class="logo-img">
                 <h1>Athens Family Loft</h1>
-            </div>
+            </a>
             <div class="nav-links">
                 <a href="#contact" class="nav-link">Contact Info</a>
                 <a href="#booking" class="nav-link book-now-btn">Book Now</a>
@@ -98,35 +100,77 @@
         <div class="container">
             <h2 class="section-title">What We Offer</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-feature="check-in">
                     <div class="feature-icon">🔑</div>
                     <h3>Self Check-in</h3>
                     <p>Convenient keyless entry with secure access code</p>
+                    <div class="feature-details">
+                        <p>✓ 24/7 contactless check-in and check-out</p>
+                        <p>✓ Secure keypad entry system</p>
+                        <p>✓ Unique code provided before arrival</p>
+                        <p>✓ No need to meet in person or pick up keys</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="wifi">
                     <div class="feature-icon">🌐</div>
                     <h3>Free WiFi</h3>
                     <p>High-speed internet throughout the apartment</p>
+                    <div class="feature-details">
+                        <p>✓ 100+ Mbps fiber optic connection</p>
+                        <p>✓ Perfect for remote work and streaming</p>
+                        <p>✓ Multiple devices supported simultaneously</p>
+                        <p>✓ Secure password-protected network</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="climate">
                     <div class="feature-icon">❄️</div>
                     <h3>Climate Control</h3>
                     <p>Air conditioning and heating for your comfort</p>
+                    <div class="feature-details">
+                        <p>✓ Individual room temperature control</p>
+                        <p>✓ Energy-efficient split AC units</p>
+                        <p>✓ Central heating for winter months</p>
+                        <p>✓ Always comfortable, any season</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="kitchen">
                     <div class="feature-icon">🍽️</div>
                     <h3>Full Kitchen</h3>
                     <p>Fully equipped kitchen with modern appliances</p>
+                    <div class="feature-details">
+                        <p>✓ Full-size refrigerator and freezer</p>
+                        <p>✓ Stove, oven, and microwave</p>
+                        <p>✓ Coffee maker and electric kettle</p>
+                        <p>✓ All cookware, dishes, and utensils provided</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="entertainment">
                     <div class="feature-icon">📺</div>
                     <h3>Entertainment</h3>
                     <p>Smart TV with streaming services</p>
+                    <div class="feature-details">
+                        <p>✓ 55" Smart TV in living room</p>
+                        <p>✓ Netflix, YouTube, and more pre-installed</p>
+                        <p>✓ Bluetooth speaker system</p>
+                        <p>✓ Board games and books available</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="laundry">
                     <div class="feature-icon">🧺</div>
                     <h3>Washer & Dryer</h3>
                     <p>In-unit laundry facilities available</p>
+                    <div class="feature-details">
+                        <p>✓ Full-size washing machine</p>
+                        <p>✓ Clothes dryer available</p>
+                        <p>✓ Complimentary detergent provided</p>
+                        <p>✓ Drying rack and iron available</p>
+                    </div>
+                    <button class="feature-expand-btn">Learn More</button>
                 </div>
             </div>
         </div>
