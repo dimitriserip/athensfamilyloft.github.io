@@ -47,15 +47,23 @@
                     <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary-color);">Availability Calendar</h3>
                     <div style="background: var(--light-bg); padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); min-height: 400px; display: flex; flex-direction: column; gap: 1.5rem;">
                         <!-- Placeholder for Google Calendar Embed -->
+                        <div style="background: white; border-radius: 10px; padding: 3rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center; border: 2px dashed #ccc;">
+                            <div>
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Calendar Placeholder</h4>
+                                <p style="color: var(--text-light); font-size: 0.9rem; max-width: 400px; margin: 0 auto;">
+                                    Replace the iframe src in book.html with your Google Calendar embed URL to show real-time availability
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Uncomment and configure when ready:
                         <iframe 
                             src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Europe/Athens" 
                             style="border: 0; width: 100%; height: 400px; border-radius: 10px;" 
                             frameborder="0" 
                             scrolling="no">
                         </iframe>
-                        <p style="color: var(--text-light); font-size: 0.9rem; text-align: center;">
-                            <em>Note: Replace YOUR_CALENDAR_ID with your actual Google Calendar ID</em>
-                        </p>
+                        -->
                     </div>
                     
                     <!-- Primary CTA: Book on Airbnb -->
@@ -71,6 +79,9 @@
                 <div class="booking-form">
                     <h3>Request Booking</h3>
                     <p style="color: var(--text-light); margin-bottom: 1.5rem;">Can't find what you're looking for? Send us a booking request and we'll get back to you shortly.</p>
+                    <p style="color: #e74c3c; font-size: 0.9rem; margin-bottom: 1rem; padding: 0.8rem; background: rgba(231, 76, 60, 0.1); border-radius: 8px; border-left: 3px solid #e74c3c;">
+                        ⚠️ <strong>Setup Required:</strong> Replace YOUR_FORM_ID in the form action attribute with your Formspree form ID to receive booking requests.
+                    </p>
                     
                     <form class="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
