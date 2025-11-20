@@ -1,12 +1,23 @@
+// Get navbar reference once
+const navbar = document.querySelector('.navbar');
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Get the navbar height to offset scroll position
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            
+            // Calculate the position to scroll to
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = targetPosition - navbarHeight - 20; // 20px additional offset for spacing
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     });
@@ -14,7 +25,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Navbar scroll effect
 let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -138,6 +148,37 @@ animateElements.forEach((el, index) => {
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
     }, index * 100);
+});
+
+// Expandable feature cards
+const featureCards = document.querySelectorAll('.feature-card');
+featureCards.forEach(card => {
+    const expandBtn = card.querySelector('.feature-expand-btn');
+    
+    // Only add listeners if button exists
+    if (!expandBtn) return;
+    
+    // Make the entire card clickable
+    card.addEventListener('click', function(e) {
+        // Prevent double-triggering if button is clicked
+        if (e.target === expandBtn) return;
+        
+        // Toggle expanded state
+        this.classList.toggle('expanded');
+        
+        // Update button text
+        if (this.classList.contains('expanded')) {
+            expandBtn.textContent = 'Show Less';
+        } else {
+            expandBtn.textContent = 'Learn More';
+        }
+    });
+    
+    // Handle button click separately
+    expandBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        card.click();
+    });
 });
 
 // Console message for developers
