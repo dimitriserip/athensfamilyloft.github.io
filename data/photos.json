@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "category": "kitchen",
+    "caption": "Modern fully-equipped kitchen",
+    "alt": "Kitchen with modern appliances and dining area",
+    "sizes": {
+      "small": "assets/images/gallery/kitchen-placeholder.svg",
+      "medium": "assets/images/gallery/kitchen-placeholder.svg",
+      "large": "assets/images/gallery/kitchen-placeholder.svg"
+    }
+  },
+  {
+    "id": 2,
+    "category": "living",
+    "caption": "Spacious living room",
+    "alt": "Bright and comfortable living room with modern furniture",
+    "sizes": {
+      "small": "assets/images/gallery/livingroom-placeholder.svg",
+      "medium": "assets/images/gallery/livingroom-placeholder.svg",
+      "large": "assets/images/gallery/livingroom-placeholder.svg"
+    }
+  },
+  {
+    "id": 3,
+    "category": "bedroom",
+    "caption": "Comfortable bedroom",
+    "alt": "Cozy bedroom with queen-size bed",
+    "sizes": {
+      "small": "assets/images/gallery/bedroom-placeholder.svg",
+      "medium": "assets/images/gallery/bedroom-placeholder.svg",
+      "large": "assets/images/gallery/bedroom-placeholder.svg"
+    }
+  },
+  {
+    "id": 4,
+    "category": "exterior",
+    "caption": "Building exterior and views",
+    "alt": "Modern apartment building in Athens",
+    "sizes": {
+      "small": "assets/images/gallery/exterior-placeholder.svg",
+      "medium": "assets/images/gallery/exterior-placeholder.svg",
+      "large": "assets/images/gallery/exterior-placeholder.svg"
+    }
+  }
+]
