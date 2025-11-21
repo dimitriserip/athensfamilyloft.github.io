@@ -86,11 +86,13 @@ galleryItems.forEach(item => {
     });
 });
 
-// Add parallax effect to hero section
+// Add parallax effect to hero section (disabled on booking page)
 window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero');
     const scrolled = window.pageYOffset;
-    if (hero) {
+    const isBookingPage = document.body.classList.contains('booking-page');
+    
+    if (hero && !isBookingPage) {
         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
