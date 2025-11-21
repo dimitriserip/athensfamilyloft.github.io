@@ -777,3 +777,51 @@ body.booking-page .contact {
     z-index: 10;
     background: var(--white);
 }
+
+/* Events Calendar Section */
+.events-calendar {
+    padding: 6rem 0;
+    background: var(--light-bg);
+}
+
+.calendar-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.calendar-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio for responsive height */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.calendar-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile responsiveness for calendar */
+@media (max-width: 768px) {
+    .events-calendar {
+        padding: 4rem 0;
+    }
+    
+    .calendar-wrapper {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    .calendar-container {
+        padding-bottom: 100%; /* Taller aspect ratio for mobile */
+    }
+}
